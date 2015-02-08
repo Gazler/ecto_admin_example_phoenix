@@ -15,7 +15,7 @@ defmodule EctoAdminExample.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {EctoAdminExample, []},
-     applications: [:phoenix, :cowboy, :logger, :postgrex, :ecto]]
+     applications: [:phoenix, :cowboy, :logger, :postgrex, :ecto, :ecto_admin]]
   end
 
   # Specifies your project dependencies
@@ -27,6 +27,7 @@ defmodule EctoAdminExample.Mixfile do
       {:cowboy, "~> 1.0"},
       {:postgrex, ">= 0.0.0"},
       {:ecto, "~> 0.5"},
+      {:ecto_admin, "~> 0.0.1", github: "Gazler/ecto_admin"}
     ]
   end
 end

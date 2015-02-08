@@ -18,6 +18,8 @@ defmodule EctoAdminExample.Router do
     get "/", PageController, :index
   end
 
+  get "/admin*args", EctoAdmin.Router, :dispatch
+
   # Other scopes may use custom stacks.
   # scope "/api", EctoAdminExample do
   #   pipe_through :api
