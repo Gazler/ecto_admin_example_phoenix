@@ -21,8 +21,11 @@ config :logger, :console,
 import_config "#{Mix.env}.exs"
 
 config :ecto_admin_example, EctoAdminExample.Repo,
+  database: "ecto_admin_example_repo",
+  username: "user",
+  password: "pass",
+  hostname: "localhost"
 
 config :ecto_admin_example, EctoAdmin,
   repo:   EctoAdminExample.Repo,
   models: [users: EctoAdminExample.User, comments: EctoAdminExample.Comment]
-
